@@ -1,0 +1,110 @@
+execute pathogen#infect()
+syntax on
+filetype plugin on
+
+" New Leader Key
+let mapleader = ","
+
+" Dev Icons
+set encoding=UTF-8
+
+" Highlight line
+set cursorline
+hi CursorLine term=bold cterm=bold guibg=Grey40
+
+" MarkDown Preview Plugin
+"autocmd BufNewFile,BufRead \*.{md,mdwn,mkd,mkdn,mark\*}
+":set filetype=markdown
+
+" Colorschemes
+"colorscheme wolfpack
+"colorscheme iceberg
+"colorscheme meta5
+"colorscheme gruvbox
+"colorscheme rdark-terminal2
+"colorscheme railscasts
+
+:map <Leader>2 :colorscheme gruvbox<CR>
+:map <Leader>3 :colorscheme iceberg<CR>
+
+colorscheme minimalist
+"let g:airline_theme='minimalist'
+"let g:airline_powerline_fonts = 1
+"let g:airline#extensions#tabline#enabled = 1
+
+"Indentation
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+" Number Line
+set number
+set relativenumber
+
+" Background Contrast
+set background=dark
+
+" Horizontal Split Below
+set splitbelow
+
+" Vertical Split Right
+set splitright
+
+"Compiling a tex file
+autocmd BufWritePost *.tex :!single_pdf_compile2.py
+
+" Tabs for HTML files
+autocmd FileType html set tabstop=2 | set shiftwidth=2 | set expandtab | set softtabstop=2
+
+" Highlight Search
+set hlsearch
+set incsearch
+
+"""""""""""""""""""""""""""""""""""""""""""""""""" "
+"               KEY MAPPING
+"""""""""""""""""""""""""""""""""""""""""""""""""" "
+" Toggle Goyo on and off
+:map <F8> :Goyo<CR>
+
+" Tab Navigation
+:map <F2>   :tabprevious<CR>
+:map <F12>  :tablast<CR>
+:map <C-i>  :tabfirst<CR>
+
+" Tab creation is missing (tabedit and tabnew)
+:map <Leader>t  :tabedit<CR>
+
+" Vim File Explore
+:map <C-X>      :Vexplore<CR> 
+:map <Leader>x  :Sexplore<CR>
+
+" Splitting Vim Windows
+:map <Leader>v :vsplit
+:map <Leader>h :split
+
+" Clear Highlight Search
+:map <Leader>c :nohlsearch<CR>
+
+" Buffer Navigation
+:map <Leader>n :next<CR>
+:map <Leader>p :previous<CR>
+:map <Leader>l :last<CR>
+:map <Leader>f :first<CR>
+
+"Close all windows but the current one
+:map <Leader>o :only<CR>
+
+"Close all tabs but the current one
+:map <Leader>to :tabon<CR>
+
+" Open Terminal in a vim buffer
+:map <Leader>s :TerminalSplit bash<CR>
+
+" Latex Compiler
+":map <C-a>  :!single_pdf_compile2.py<CR>
+
+" NERDTree
+":map <C-n> :NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
