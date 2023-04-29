@@ -108,3 +108,8 @@ set incsearch
 ":map <C-n> :NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
+:function EnterStuff()
+:   $read !date
+:   "insert  This is a text to show in the file. :)
+:   "        Wait, is this a second line?
+:endfunction
