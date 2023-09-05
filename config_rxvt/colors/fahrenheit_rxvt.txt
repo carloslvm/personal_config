@@ -1,0 +1,38 @@
+!! Colorscheme for urxvt terminal based on the Fahrenheit Vim's colorscheme.
+
+! special
+*.foreground:   #d3d3d3
+*.background:   #121213
+*.cursorColor:  #b9b9b9
+
+! black
+*.color0:       #262626
+*.color8:       #ffffd7
+
+! red
+*.color1:       #ffd7af
+*.color9:       #d7af87
+
+! green
+*.color2:       #af875f
+*.color10:      #d7875f
+
+! yellow
+*.color3:       #ffaf5f
+*.color11:      #ffd787
+
+! blue
+*.color4:       #ffd75f
+*.color12:      #d75f00
+
+! magenta
+*.color5:       #870000
+*.color13:      #875f5f
+
+! cyan
+*.color6:       #5f87af
+*.color14:      #a8a8a8
+
+! white
+*.color7:       #ffffff
+*.color15:      #ffffd7

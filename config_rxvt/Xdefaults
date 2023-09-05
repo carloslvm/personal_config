@@ -1,0 +1,86 @@
+!! Colorscheme
+
+!! special
+*.foreground: #979cac
+*.background: #1c1f27
+*.cursorColor: #afbfbf
+
+!! black
+*.color0: #4f4f4f
+*.color8: #7b7b7b
+
+!! red
+*.color1: #af4b57
+*.color9: #af4b57
+
+!! green
+*.color2: #afd383
+*.color10: #ceffab
+
+!! yellow
+*.color3: #e5c079
+*.color11: #fffecc
+
+!! blue
+*.color4: #7d90a4
+*.color12: #b5dcfe
+
+!! magenta
+*.color5: #a4799d
+*.color13: #fb9bfe
+
+!! cyan
+*.color6: #85a6a5
+*.color14: #dfdffd
+
+!! white
+*.color7: #eeedee
+*.color15: #fefffe
+
+!! URxvt Appereance
+URxvt.font: xft:Anonymice Nerd Font:sytle=Regular:size=9.5
+!URxvt.boldFont: xft:Anonymice Nerd Font Bold:style=Bold:size=9.5
+!URxvt.italicFont: xft:Anonymice Nerd Font Italic:style=Italic:size=9.5
+!URxvt.boldItalicfont: xft:Anonymice Nerd Font:style=Bold Italic:size=9.5
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.geometry: 92x24
+URxvt.internalBorder: 10
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: true
+URxvt.saveline: 1500
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.depth: 24
+URxvt.iso14755: false
+
+URxvt.jumpScroll: true
+
+!! Keybinds for Navigation
+URxvt.keysym.Shift-Up: command:\033]720;1\007
+URxvt.keysym.Shift-Down: command:\033]721;1\007
+URxvt.keysym.Control-Up: command:\033[1;5A
+URxvt.keysym.Control-Down: command:\033[1;5B
+URxvt.keysym.Control-Right: command:\033[1;5C
+URxvt.keysym.Control-Left: command:\033[1;5D
+
+! Shift Up: Scroll one line higher
+! Shift Down: Scroll one line lower
+! Control Left: Jump to the previous word
+! Control Right: Jump to the next word
+
+
+!! Copy and paste and extensions
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
+URxvt.copyCommand: xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.keysym.M-Escape: perl:keyboard-select:active
+URxvt.keysym.M-s: perl:keyboard-select:search
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.urlLauncher: /home/carlos/Downloads/farm/firefox/firefox-bin
+URxvt.underlineURLs: true
+URxvt.urlButton: 1
