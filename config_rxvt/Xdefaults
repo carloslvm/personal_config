@@ -37,6 +37,10 @@
 *.color7: #eeedee
 *.color15: #fefffe
 
+!! Transparency that worked for me. Make sure to have compton install
+URxvt.transparent: true
+URxvt.shading: 15
+
 !! URxvt Appereance
 URxvt.font: xft:Anonymice Nerd Font:sytle=Regular:size=9.5
 !URxvt.boldFont: xft:Anonymice Nerd Font Bold:style=Bold:size=9.5
@@ -72,7 +76,7 @@ URxvt.keysym.Control-Left: command:\033[1;5D
 
 
 !! Copy and paste and extensions
-URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,resize-font
 URxvt.copyCommand: xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o -selection clipboard
 URxvt.keysym.M-c: perl:clipboard:copy
@@ -84,3 +88,28 @@ URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.urlLauncher: /home/carlos/Downloads/farm/firefox/firefox-bin
 URxvt.underlineURLs: true
 URxvt.urlButton: 1
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! Resize font
+! Resize font extension does not come with urxvt by default, it is
+! required to install it from github:
+! git clone https://github.com/simmel/urxvt-resize-font.git
+! You have save the file in the path where urxvt looks for libraries,
+! by default the path is $HOME/.urxvt/ext.
+! In my case, in Debian I save it in /usr/lib/urxvt/perl/urxvt-perls
+
+URxvt.keysym.C-Up: font-size:increase
+URxvt.keysym.C-Down: font-size:decrease
+URxvt.keysym.C-equal: font-size:reset
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+! Install xsel because it is a clipboard manager you need to copy and
+! paste.
+
+! Install extensions to make resize-font and other features to work:
+! git clone https://github.com/muennich/urxvt-perls
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
