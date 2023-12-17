@@ -37,7 +37,7 @@
 *.color7: #eeedee
 *.color15: #fefffe
 
-!! Transparency that worked for me. Make sure to have compton install
+!! Transparency that worked for me. Make sure to have compton install if you use I3
 URxvt.transparent: true
 URxvt.shading: 15
 
