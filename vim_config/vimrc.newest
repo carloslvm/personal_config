@@ -46,6 +46,7 @@ let g:everforest_background = 'soft'
 "colorscheme despacio
 "colorscheme gruvbox
 colorscheme fahrenheit
+"colorscheme afterglow
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "colorscheme jellybeans
@@ -57,6 +58,30 @@ if has('termguicolors') && &termguicolors
     let g:jellybeans_overrides['background']['guibg'] = 'none'
 endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" Alduin colorscheme Options
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Almost Black Background
+let g:alduin_Shout_Dragon_Aspect = 1
+colorscheme alduin 
+
+
+" Black Background
+"let g:alduin_Shout_Become_Ethereal = 1
+"colorscheme alduin 
+
+
+" Adds Deep Red Color for Special Highlighting Groups
+"let g:alduin_Shout_Fire_Breath = 1
+"colorscheme alduin
+
+" Removes Block Matchparens setting and adds an underline
+"let g:alduin_Shout_Aura_Whisper = 1
+"colorscheme alduin
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
 
 :map <Leader>1 :colorscheme jellybeans<CR>
 :map <Leader>2 :colorscheme gruvbox<CR>
@@ -112,8 +137,8 @@ set incsearch
 :map <C-X>      :Vexplore<CR> 
 :map <Leader>x  :Sexplore<CR>
 " Splitting Vim Windows
-:map <Leader>v :vsplit
-:map <Leader>h :split
+:map <Leader>v :vsplit<CR>
+:map <Leader>h :split<CR>
 " Clear Highlight Search
 :map <Leader>c :nohlsearch<CR>
 " Buffer Navigation
@@ -128,9 +153,13 @@ set incsearch
 " Open Terminal 
 :map <Leader>s :shell<CR>
 " Latex Compiler
-":map <C-a>  :!single_pdf_compile2.py<CR>
+":map <C-a>  :!pdf_compile.py<CR>
 " NERDTree
 :map <C-n> :NERDTreeToggle<CR>
+" Line Going up
+:map <Leader>u :norm ddkP<CR>
+" Line Going down
+:map <Leader>i :norm ddp<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""" "
 
 ":augroup myGroup
